@@ -6,9 +6,12 @@ const maxItems = 5;
 
 let addItem = item => {
     
-    basket.push(item);  
+    if(!isFull()) {
+        basket.push(item); 
+        return true
+    }
 
-    return  true;
+    return  false;
 
 }
 
@@ -25,17 +28,18 @@ function listItems(basket){
     }
 }
 
-console.log('Item was added to basket:', addItem('Jam'));
-console.log('Item was added to basket:', addItem('Eggs'));
-console.log('Item was added to basket:', addItem('Bacon'));
-console.log('Item was added to basket:', addItem('Juice'));
+console.log('Was item added to basket?', addItem('Jam'));
+console.log('Was item added to basket?', addItem('Eggs'));
+console.log('Was item added to basket?', addItem('Bacon'));
+console.log('Was item added to basket?', addItem('Juice'));
 
 
 console.log('Is the basket full?',isFull());
 
-console.log('Item was added to basket:', addItem('Bread'));
+console.log('Was item added to basket?', addItem('Bread'));
 
 console.log('Is the basket full?',isFull());
+console.log('Was item added to basket?', addItem('Bread'));
 
 listItems(basket)
 
