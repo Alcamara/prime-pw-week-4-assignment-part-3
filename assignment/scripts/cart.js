@@ -19,4 +19,19 @@ function listItems(basket){
     }
 }
 
-console.log(addItem(''));
+addItem('Jam');
+addItem('eggs');
+addItem('turkey Bacon');
+addItem('bread');
+
+listItems(basket)
+
+console.log(basket);
+
+function empty(){
+    basket = [];
+}
+
+empty()
+
+console.log(basket);
